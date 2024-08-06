@@ -8,6 +8,7 @@
 <div th:replace="/fragments/header :: header"></div>
 
 <div class="container-log">
+    
     <div th:if="${param.error}">
         <p class="alert-red">Invalid username and/or password</p>
     </div>
@@ -16,6 +17,7 @@
     </div>
 
     <form th:action="@{/login}" method="post">
+        <h1 style="margin-left: 140px;"><b>Log In</b></h1>
         <div>
             <input type="text" name="username" id="username" placeholder="UserName" required="true" autofocus="true"/>
         </div>

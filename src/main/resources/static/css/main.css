@@ -81,13 +81,13 @@ body {
     width: 30%;
     margin: auto;
     background-color: rgb(183, 194, 226);
-    margin-top: 120px;
-    margin-bottom: 160px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     border-radius: 20px;
     /* padding: 10px; */
     padding-top: 40px;
     /* padding-bottom: 10px; */
-    min-height: 230px;
+    min-height: 300px;
 }
 
 .container2 { 
