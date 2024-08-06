@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.7.12</version> <!-- Updated to a newer version -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.martynas</groupId>
@@ -45,12 +45,12 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-<!--            <scope>runtime</scope>-->
+            <!-- <scope>runtime</scope> --> <!-- Commented out, use default -->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.28</version> <!-- Use a stable version compatible with Java 8 -->
+            <version>1.18.28</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -87,10 +87,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Or the latest stable version -->
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.28</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
