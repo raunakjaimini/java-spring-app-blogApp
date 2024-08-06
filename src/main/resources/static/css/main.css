@@ -24,7 +24,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #eb5e0d;
+    background-color: #a35121;
     color: white;
     float: left;
 }
@@ -36,13 +36,15 @@
 body {
     font-family: Arial;
     padding: 0;
-    background: #242222;
-    width: 80%;
+    background: #235aa1;
+    width: 100%;
     margin: auto;
 
 }
 
 /* Header/Blog Title */
+
+
 .header {
     padding: 10px;
     font-size: 25px;
@@ -51,12 +53,50 @@ body {
 }
 
 .container {
-    /*width: 80%;*/
+    width: 90%;
+    margin: auto;
+    /* background-color: rgb(183, 194, 226); */
+}
+
+.container-post {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(183, 194, 226);
+    min-height: 350px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
+
+.container1 {
+    width: 30%;
+    margin: auto;
+    background-color: rgb(183, 194, 226);
+    margin-top: 80px;
+    margin-bottom: 160px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.container-log {
+    width: 30%;
+    margin: auto;
+    background-color: rgb(183, 194, 226);
+    margin-top: 120px;
+    margin-bottom: 160px;
+    border-radius: 20px;
+    /* padding: 10px; */
+    padding-top: 40px;
+    /* padding-bottom: 10px; */
+    min-height: 230px;
+}
+
+.container2 { 
+    width: 50%; 
     margin: auto;
 }
 
 .posts_wrapper {
-    /*width: 100%;*/
+    width: 100%;
 }
 
 /* Fake image */
@@ -72,7 +112,7 @@ body {
 }
 
 .post {
-    background-color: #ebebeb;
+    background-color: rgb(183, 194, 226);
     padding: 20px;
     margin-top: 20px;
     text-align: center;
@@ -111,6 +151,15 @@ body {
 form {
     margin: auto;
     width: 80%;
+}
+
+.form-log {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 100px;
+    margin-top: 70px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 
@@ -168,7 +217,7 @@ a:hover {
 }
 
 .blue-btn {
-    background-color: #008CBA;
+    background-color: #c55d18;
 }
 
 input, select {

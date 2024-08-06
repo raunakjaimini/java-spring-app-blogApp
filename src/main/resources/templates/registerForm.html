@@ -7,11 +7,9 @@
 
 <div th:replace="/fragments/header :: header"></div>
 
-<div class="container" th:class="align-center">
+<div class = "container1"  th:class="align-center">
 
-    <h2>Register new user</h2>
-
-    <form action="#"
+    <form style="width: 30%; padding-top: 50px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; background-color: rgb(183, 194, 226); margin-top: 80px; margin-bottom: 150px; border-radius: 20px;" action="#"
           th:action="@{/register}"
           th:object="${blogUser}"
           method="post">

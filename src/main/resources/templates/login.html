@@ -7,7 +7,7 @@
 
 <div th:replace="/fragments/header :: header"></div>
 
-<div class="container">
+<div class="container-log">
     <div th:if="${param.error}">
         <p class="alert-red">Invalid username and/or password</p>
     </div>
@@ -23,8 +23,6 @@
             <input type="password" name="password" id="password" placeholder="Password" required="true"/>
         </div>
         <div class="align-center">
-            <label for="remember-me">Remember Me</label>
-            <input type="checkbox" id="remember-me" name="remember-me">
         </div>
         <div>
             <input type="submit" class="green-btn blue-btn" value="Login"/>
