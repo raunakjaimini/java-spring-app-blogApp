@@ -6,7 +6,9 @@ import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import java.util.Collection;
 
 @Data
@@ -33,6 +35,15 @@ public class BlogUser implements UserDetails {
     @NotEmpty(message = "Please enter the password")
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Transient
+    @NotEmpty(message = "Please retype the password")
+    private String retypePassword;
+
+    @Email(message = "Please enter a valid email address")
+    @NotEmpty(message = "Please enter the email")
+    @Column(name = "email", nullable = false)
+    private String email;
 
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
@@ -74,7 +85,7 @@ public class BlogUser implements UserDetails {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-//                ", posts=" + posts +
+                ", email='" + email + '\'' +
                 ", authorities=" + authorities +
                 '}';
     }

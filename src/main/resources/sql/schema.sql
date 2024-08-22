@@ -8,6 +8,7 @@ create table authorities
 create table users
 (
     id       bigint       not null,
+    email VARCHAR(255) NOT NULL UNIQUE,
     password varchar(255) not null,
     username varchar(255) not null,
     enabled  boolean      not null,

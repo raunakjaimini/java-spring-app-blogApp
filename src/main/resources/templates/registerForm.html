@@ -23,9 +23,21 @@
         </div>
         <div>
             <label>
+                <div class="alert-red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
+                <input style="max-width: 390px;" type="email" th:field="*{email}" placeholder="Email"/>
+            </label>
+        </div>
+        <div>
+            <label>
                 <div class="alert-red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error
                 </div>
                 <input style="max-width: 390px;" type="password" th:field="*{password}" placeholder="Password"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <div class="alert-red" th:if="${#fields.hasErrors('retypePassword')}" th:errors="*{retypePassword}">Retype Password Error</div>
+                <input style="max-width: 390px;" type="password" th:field="*{retypePassword}" placeholder="Retype Password"/>
             </label>
         </div>
         <div>
