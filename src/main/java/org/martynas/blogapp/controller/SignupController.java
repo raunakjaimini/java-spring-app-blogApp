@@ -65,7 +65,7 @@ public class SignupController {
         sessionStatus.setComplete();
         
         // Redirect to login page after successful registration
-        return "redirect:/login";
+        return "redirect:/login?signupSuccess";
     }
 
 }
