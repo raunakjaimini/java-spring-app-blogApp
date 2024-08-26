@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.security.Principal;
@@ -88,15 +89,18 @@ public class PostController {
 
     @Secured("ROLE_USER")
     @PostMapping("/createNewPost")
-    public String createNewPost(@Valid @ModelAttribute Post post, BindingResult bindingResult, SessionStatus sessionStatus) {
-        System.err.println("POST post: " + post); // for testing debugging purposes
+    public String createNewPost(@Valid @ModelAttribute Post post, BindingResult bindingResult, 
+                                SessionStatus sessionStatus, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()) {
-            System.err.println("Post did not validate");
             return "postForm";
         }
-        // Save post if all good
+        
+        // Save the post
         this.postService.save(post);
-        System.err.println("SAVE post: " + post); // for testing debugging purposes
+        
+        // Add success message to redirect attributes
+        redirectAttributes.addFlashAttribute("successMessage", "Post added successfully!");
+        
         sessionStatus.setComplete();
         return "redirect:/post/" + post.getId();
     }
