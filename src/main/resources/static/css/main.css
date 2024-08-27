@@ -122,16 +122,51 @@ body {
     height: 200px;
 }
 
-.post {
+/* .post {
     background-color: rgb(183, 194, 226);
     padding: 20px;
     margin-top: 20px;
     text-align: center;
+} */
+
+.post {
+    background-color: rgb(183, 194, 226);
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.post .post-content {
+    flex: 1; /* Allow this part to take up remaining space */
 }
 
 .post h2 {
+    text-align: center;
+    /* margin-left: 445px; */
+    margin-top: 10px;
+    padding: 0; /* Remove padding if needed */
     text-transform: capitalize;
 }
+
+.post img {
+    width: 130px;
+    height: 150px;
+    margin-right: 20px;
+    margin-top: 60px;
+    display: block;
+}
+
+.edit-button {
+    /* text-align: center; Center-align the button within its container */
+    margin-top: 20px; /* Space above the button */
+    margin-left: 465px;
+    width: 100%; /* Take full width of the parent container */
+}
+
 
 .post p {
     text-align: justify

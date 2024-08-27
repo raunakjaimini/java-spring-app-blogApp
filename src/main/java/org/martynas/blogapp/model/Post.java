@@ -37,6 +37,9 @@ public class Post {
     @Column(name = "creation_date", nullable = false, updatable = false)
     private Date creationDate;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @OneToMany(mappedBy = "post", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private Collection<Comment> comments;
 
