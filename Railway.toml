@@ -7,4 +7,4 @@ service_name = "java-app"
 # Command to build the Java project using Maven
 build = "mvn clean package"
 # Command to start the Java application using the JAR file
-start = "java -jar target/your-app-name-1.0.0.jar"
+start = "java -jar target/spring-boot-blog-app-0.0.1-SNAPSHOT.war"
