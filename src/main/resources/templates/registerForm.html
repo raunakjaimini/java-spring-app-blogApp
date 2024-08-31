@@ -55,14 +55,14 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="/fragments/head :: head">
+<head th:replace="fragments/head :: head">
     <link rel="stylesheet" href="styles.css">
     <!-- Include Font Awesome for icons (optional) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<div th:replace="/fragments/header :: header"></div>
+<div th:replace="fragments/header :: header"></div>
 
 <div class="content-wrapper">
     <form class="unique-form-container" action="#"
@@ -102,7 +102,7 @@
     </form>
 </div>
 
-<footer th:replace="/fragments/footer :: footer"></footer>
+<footer th:replace="fragments/footer :: footer"></footer>
 
 </body>
 </html>
