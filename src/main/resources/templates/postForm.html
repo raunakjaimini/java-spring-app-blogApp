@@ -54,13 +54,13 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="/fragments/head :: head">
+<head th:replace="fragments/head :: head">
     <!-- CKEditor CDN -->
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
 <body>
 
-<div th:replace="/fragments/header :: header"></div>
+<div th:replace="fragments/header :: header"></div>
 <div class="content-wrapper">
 
     <div class="post-container">
@@ -100,7 +100,7 @@
     CKEDITOR.replace('body');
 </script>
 
-<footer th:replace="/fragments/footer :: footer"></footer>
+<footer th:replace="fragments/footer :: footer"></footer>
 
 </body>
 </html>
