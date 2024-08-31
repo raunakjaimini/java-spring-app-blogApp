@@ -1,51 +1,208 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+<!--      xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<!--<head th:replace="/fragments/head :: head"></head>-->
+<!--<body>-->
+
+<!--<div th:replace="/fragments/header :: header"></div>-->
+
+<!--<div class="container">-->
+
+<!--    &lt;!&ndash; Display Success Message &ndash;&gt;-->
+<!--    <div class="alert alert-success" th:if="${successMessage}" th:text="${successMessage}"></div>-->
+<!--    -->
+<!--    <div class="post">-->
+<!--        <img th:src="${post.imageUrl}" alt="Post Image" style="width: 130px; height: 150px; margin-right: 15px;"/>-->
+<!--        <div>-->
+<!--            <h2 th:text="${post.title}">Title</h2>-->
+<!--            <p th:text="${post.body}">body text</p>-->
+<!--            <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">-->
+<!--                <a th:href="@{'/editPost/{id}'(id=${post.id})}">-->
+<!--                    <button class="green-btn blue-btn" type="button">Edit</button>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--    -->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    -->
+<!--    <div class="comments">-->
+<!--        <h2>Comments</h2>-->
+<!--        <div th:if="${#lists.isEmpty(post.comments)}">-->
+<!--            <p>No comments yet. Be the first to comment!</p>-->
+<!--        </div>-->
+<!--        <div class="comment" th:each="comment : ${post.comments}">-->
+<!--            <h5 th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>-->
+<!--            <p th:text="${comment.body}">Body</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div class="align-center">-->
+<!--        <a th:href="@{'/comment/{id}'(id=${post.id})}">-->
+<!--            <button class="green-btn" type="button">Comment Post</button>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="/fragments/head :: head"></head>
+<head th:replace="/fragments/head :: head">
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: sans-serif;-->
+<!--            background-color: #f0f0f0;-->
+<!--            color: #333;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        -->
+<!--    </style>-->
+
+<!--    working posts-->
+</head>
 <body>
 
 <div th:replace="/fragments/header :: header"></div>
 
-<div class="container">
+<div class="content-wrapper blog-post-out">
 
     <!-- Display Success Message -->
-    <div class="alert alert-success" th:if="${successMessage}" th:text="${successMessage}"></div>
-    
-    <div class="post">
-        <img th:src="${post.imageUrl}" alt="Post Image" style="width: 130px; height: 150px; margin-right: 15px;"/>
-        <div>
-            <h2 th:text="${post.title}">Title</h2>
-            <p th:text="${post.body}">body text</p>
+    <div class="alert-success" th:if="${successMessage}" th:text="${successMessage}"></div>
+
+    <div class="post-card">
+        <img class="post-image" th:src="${post.imageUrl}" alt="Post Image"/>
+        <div class="post-content">
+            <h2 class="post-title" th:text="${post.title}">Title</h2>
+            <p class="post-body" th:text="${post.body}">body text</p>
             <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">
                 <a th:href="@{'/editPost/{id}'(id=${post.id})}">
-                    <button class="green-btn blue-btn" type="button">Edit</button>
+                    <button class="edit-btn" type="button">Edit</button>
                 </a>
             </div>
-    
         </div>
-
     </div>
-    
-    <div class="comments">
-        <h2>Comments</h2>
+<!--&lt;!&ndash;     Download Button &ndash;&gt;-->
+<!--    <div class="download-btn-container">-->
+<!--        <button class="download-btn" type="button" onclick="downloadPost()">Download Post</button>-->
+<!--    </div>-->
+
+
+        <div class="comments-section">
+        <h2 class="comment-header">Comments</h2>
         <div th:if="${#lists.isEmpty(post.comments)}">
             <p>No comments yet. Be the first to comment!</p>
         </div>
         <div class="comment" th:each="comment : ${post.comments}">
-            <h5 th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>
-            <p th:text="${comment.body}">Body</p>
+            <h5 class="comment-info" th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>
+            <p class="comment-body" th:text="${comment.body}">Body</p>
         </div>
     </div>
-    
-    <div class="align-center">
+
+    <div class="comment-btn-container">
         <a th:href="@{'/comment/{id}'(id=${post.id})}">
-            <button class="green-btn" type="button">Comment Post</button>
+            <button class="comment-btn" type="button">Comment Post</button>
         </a>
     </div>
 </div>
 
 <footer th:replace="/fragments/footer :: footer"></footer>
+    <!-- JavaScript to handle the download -->
+<!--    <script>-->
+<!--        function downloadPost() {-->
+<!--            // Get the content of the post-->
+<!--            const postContent = document.getElementById('post-content').innerHTML;-->
 
+<!--            // Create a Blob with the post content-->
+<!--            const blob = new Blob([postContent], { type: 'text/html' });-->
+
+<!--            // Create a link element-->
+<!--            const a = document.createElement('a');-->
+<!--            a.href = URL.createObjectURL(blob);-->
+<!--            a.download = 'post.html';  // Set the name of the file to download-->
+<!--            document.body.appendChild(a);-->
+<!--            a.click();-->
+<!--            document.body.removeChild(a);-->
+<!--        }-->
+<!--    </script>-->
 </body>
 </html>
+<!--</head>-->
+<!--<body>-->
+
+<!--<div th:replace="/fragments/header :: header"></div>-->
+
+<!--<div class="content-wrapper blog-post-out">-->
+
+<!--    &lt;!&ndash; Display Success Message &ndash;&gt;-->
+<!--    <div class="alert-success" th:if="${successMessage}" th:text="${successMessage}"></div>-->
+
+<!--    <div class="post-card" id="post-content">-->
+<!--        <img class="post-image" th:src="${post.imageUrl}" alt="Post Image"/>-->
+<!--        <div class="post-content">-->
+<!--            <h2 class="post-title" th:text="${post.title}">Title</h2>-->
+<!--            <p class="post-body" th:text="${post.body}">body text</p>-->
+<!--            <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">-->
+<!--                <a th:href="@{'/editPost/{id}'(id=${post.id})}">-->
+<!--                    <button class="edit-btn" type="button">Edit</button>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Download Button &ndash;&gt;-->
+<!--    <div class="download-btn-container">-->
+<!--        <button class="download-btn" type="button" onclick="downloadPost()">Download Post</button>-->
+<!--    </div>-->
+
+<!--    <div class="comments-section">-->
+<!--        <h2 class="comment-header">Comments</h2>-->
+<!--        <div th:if="${#lists.isEmpty(post.comments)}">-->
+<!--            <p>No comments yet. Be the first to comment!</p>-->
+<!--        </div>-->
+<!--        <div class="comment" th:each="comment : ${post.comments}">-->
+<!--            <h5 class="comment-info" th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>-->
+<!--            <p class="comment-body" th:text="${comment.body}">Body</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="comment-btn-container">-->
+<!--        <a th:href="@{'/comment/{id}'(id=${post.id})}">-->
+<!--            <button class="comment-btn" type="button">Comment Post</button>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--&lt;!&ndash; JavaScript to handle the download &ndash;&gt;-->
+<!--<script>-->
+<!--    function downloadPost() {-->
+<!--        // Get the content of the post-->
+<!--        const postContent = document.getElementById('post-content').innerHTML;-->
+
+<!--        // Create a Blob with the post content-->
+<!--        const blob = new Blob([postContent], { type: 'text/html' });-->
+
+<!--        // Create a link element-->
+<!--        const a = document.createElement('a');-->
+<!--        a.href = URL.createObjectURL(blob);-->
+<!--        a.download = 'post.html';  // Set the name of the file to download-->
+<!--        document.body.appendChild(a);-->
+<!--        a.click();-->
+<!--        document.body.removeChild(a);-->
+<!--    }-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->

@@ -4,25 +4,26 @@
 <body>
 
 <div th:replace="/fragments/header :: header"></div>
+<div class="content-wrapper">
+    <div class="comment-container">
+        <h2>Leave a Comment</h2>
 
-<div class="container">
-
-    <h2>Write new comment</h2>
-    
-    <form action="#"
-          th:action="@{'/comment'}"
-          th:object="${comment}"
-          method="post">
-        <label>
-            <div class="alert-red" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>
-            <textarea th:field="*{body}" placeholder="Write something valuable"></textarea>
-        </label>
-        <div>
-            <button class="green-btn" type="submit">Send</button>
-        </div>
-    </form>
+        <form class="comment-form" action="#"
+              th:action="@{'/comment'}"
+              th:object="${comment}"
+              method="post">
+            <div class="form-group">
+                <label>
+                    <div class="alert-red" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>
+                    <textarea class="form-control" th:field="*{body}" placeholder="Write something valuable"></textarea>
+                </label>
+            </div>
+            <div class="button-container">
+                <button class="btn-submit" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
 </div>
-
 <footer th:replace="/fragments/footer :: footer"></footer>
 
 </body>

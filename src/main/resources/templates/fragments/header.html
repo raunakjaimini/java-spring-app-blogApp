@@ -7,6 +7,10 @@
 </head>
 <body>
 <header th:fragment="header" class="header-main">
+    <div class="header">
+    <h2>Blogsite - Valuebound
+    </h2>
+</div>
     <div class="topnav">
         <a class="active" th:href="@{/}">Home</a>
         <span sec:authorize="hasRole('ROLE_USER')">
@@ -23,10 +27,7 @@
         <a class="right" th:href="@{/signup}">Sign Up</a>
         </span>
     </div>
-    <div class="header">
-        <h2>Blogger App ValueBound
-        </h2>
-    </div>
+
 </header>
 
 </body>

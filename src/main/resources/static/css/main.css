@@ -1,292 +1,642 @@
-/* NAV Style */
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #235aa1;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #b0b6c7;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #a35121;
-    color: white;
-    float: left;
-}
-
-.topnav a.right {
-    float: right;
-}
-
+/* General Styles */
 body {
-    font-family: Arial;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     padding: 0;
-    background: #235aa1;
+    background-color: #f7f7f7; /* Pale white background for the body */
+    color: #333; /* Darker grey text color for readability */
+    margin: 0;
     width: 100%;
-    margin: auto;
-
+    line-height: 1.6;
 }
 
-/* Header/Blog Title */
-
-
-.header {
-    padding: 10px;
-    font-size: 25px;
-    text-align: center;
-    background: rgb(183, 194, 226);
+/* Navigation Styles */
+/* General Reset for Consistency */
+body, h2, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Modern, clean font */
+    color: #333; /* Standard dark color for text */
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    /* background-color: rgb(183, 194, 226); */
-}
-
-.container-post {
-    width: 90%;
-    margin: auto;
-    background-color: rgb(183, 194, 226);
-    min-height: 350px;
-    margin-bottom: 100px;
-    border-radius: 20px;
-}
-
-.container1 {
-    width: 30%;
-    margin: auto;
-    background-color: rgb(183, 194, 226);
-    margin-top: 80px;
-    margin-bottom: 160px;
-    border-radius: 20px;
-    padding: 30px;
-}
-
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-
-.container-log {
-    width: 30%;
-    margin: auto;
-    background-color: rgb(183, 194, 226);
-    margin-top: 80px;
-    margin-bottom: 80px;
-    border-radius: 20px;
-    /* padding: 10px; */
-    padding-top: 40px;
-    /* padding-bottom: 10px; */
-    min-height: 300px;
-}
-
-.container2 { 
-    width: 50%; 
-    margin: auto;
-}
-
-.posts_wrapper {
-    width: 100%;
-}
-
-/* Fake image */
-.img {
-    float: left;
-    background-color: #aaa;
-    align-content: start;
-    width: 20%;
-    padding: 20px;
-    margin: 0 20px 20px 0;
-
-    height: 200px;
-}
-
-/* .post {
-    background-color: rgb(183, 194, 226);
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-} */
-
-.post {
-    background-color: rgb(183, 194, 226);
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
-    text-align: left;
+/* Top Navigation Bar Styles */
+.topnav {
+    overflow: hidden;
+    padding: 10px 20px; /* Slim padding for reduced height */
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center; /* Vertical center alignment */
+    justify-content: space-between; /* Space between elements */
 }
 
-.post .post-content {
-    flex: 1; /* Allow this part to take up remaining space */
-}
-
-.post h2 {
-    text-align: center;
-    /* margin-left: 445px; */
-    margin-top: 10px;
-    padding: 0; /* Remove padding if needed */
-    text-transform: capitalize;
-}
-
-.post img {
-    width: 130px;
-    height: 150px;
-    margin-right: 20px;
-    margin-top: 60px;
-    display: block;
-}
-
-.edit-button {
-    /* text-align: center; Center-align the button within its container */
-    margin-top: 20px; /* Space above the button */
-    margin-left: 465px;
-    width: 100%; /* Take full width of the parent container */
-}
-
-
-.post p {
-    text-align: justify
-}
-
-/* Clear floats after the posts */
-.post:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.comments h2 {
-    text-align: center;
+/* General styling for the header */
+.header-main {
+    background-color: #ffffff; /* White background */
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 20px auto;
+    max-width: 1800px; /* Centered and limited width */
 }
 
-.comment {
-    position: relative;
-    background-color: white;
-    padding: 10px 20px;
-    /*margin-top: 10px;*/
-    text-align: justify;
-    width: 80%;
-    margin: 5px auto;
-}
-
-form {
-    margin: auto;
-    width: 80%;
-}
-
-.form-log {
-    margin: auto;
-    width: 80%;
-    margin-bottom: 100px;
-    margin-top: 70px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
-
-/* Footer */
-footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-}
-
-.alert-red {
-    padding: 20px;
-    background-color: #f44336; /* Red */
-    color: white;
-    margin: 15px auto;
-    width: 80%;
-}
-.alert-green {
-    padding: 20px;
-    background-color: rgb(175, 83, 30);
-    color: white;
-    margin: 15px auto;
-    width: 80%;
-}
-
-a {
-    color: #336655;
+/* Styling for the nav links */
+.topnav a {
+    color: #333;
+    padding: 10px 15px;
     text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px; /* Space between links */
+    transition: color 0.3s; /* Smooth color transition */
 }
 
-a:hover {
-    color: #336655;
+.topnav a:hover {
+    color: #007bff; /* Blue text on hover */
+}
+
+
+
+.header-main .right {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.header-main .right:hover {
+    background-color: #000; /* Darker background on hover */
+    color: #ffffff;
+}
+
+.header-main h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-main {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .topnav a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .header-main .right {
+        margin-top: 10px;
+    }
+}
+
+
+
+/*!*Login styling*!*/
+/*.login-container-out{*/
+/*    max-width: 100%;*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    color: white;*/
+/*}*/
+
+/*.login-container {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    max-width: 500px;*/
+/*    background-color: #333;*/
+/*    border-radius: 10px;*/
+/*    padding: 40px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+/*    position: relative;*/
+/*}*/
+
+/*.form-title {*/
+/*    font-size: 32px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.input-group {*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*.form-input {*/
+/*    width: 100%;*/
+/*    padding: 15px;*/
+/*    border: none;*/
+/*    background-color: #444;*/
+/*    color: #fff;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.form-input:focus {*/
+/*    outline: none;*/
+/*    box-shadow: 0 0 5px #fff;*/
+/*}*/
+
+/*.submit-button {*/
+/*    width: 100%;*/
+/*    padding: 15px;*/
+/*    border: none;*/
+/*    background-color: #555;*/
+/*    color: #fff;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.submit-button:hover {*/
+/*    background-color: #666;*/
+/*}*/
+
+/*.checkbox-label {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.checkbox-input {*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*.form-footer {*/
+/*    margin-top: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.forgot-password-link {*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.forgot-password-link:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*.notification {*/
+/*    margin-bottom: 20px;*/
+/*    padding: 15px;*/
+/*    border-radius: 5px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.error-message {*/
+/*    background-color: #ea4335;*/
+/*}*/
+
+/*.success-message {*/
+/*    background-color: #4caf50;*/
+/*}*/
+
+
+
+/*login form css updated*/
+/* Container for centering the login form */
+.unique-login-container-out {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0); /* Corrected background color to use rgba */
+    color: white;
+    padding: 20px; /* Added padding for better mobile view */
+}
+
+/* Styling for the login form container */
+.unique-login-container {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    width: 100%;
+    max-width: 400px; /* Compact form width */
+    background-color: #333;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Styling for the form title */
+.unique-form-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+/* Grouping of input elements */
+.unique-input-group {
+    margin-bottom: 15px;
+    width: 100%; /* Ensure input fields take full width */
+}
+
+/* Styling for input fields */
+.unique-form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555; /* Slight border for input fields */
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 16px; /* Uniform font size */
+    text-align: center; /* Center-align text in input fields */
+}
+
+/* Focus state for input fields */
+.unique-form-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+/* Styling for the submit button */
+.unique-submit-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    font-size: 16px; /* Uniform font size */
+    text-align: center; /* Center-align text */
+}
+
+/* Hover state for the submit button */
+.unique-submit-button:hover {
+    background-color: #666;
+}
+
+/* Form footer for additional links or info */
+.unique-form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styling for the "Forgot Password?" link */
+.unique-forgot-password-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover state for the link */
+.unique-forgot-password-link:hover {
     text-decoration: underline;
 }
 
-.green-btn {
-    background-color: #c55d18;
+/* Base styles for notifications */
+.unique-notification {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center; /* Center text within notifications */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.1s ease; /* Smooth animation */
+}
+
+/* Hover effect for notifications */
+.unique-notification:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Error message styling */
+.unique-error-message {
+    color: red;
+    border-left: 5px solid #d32f2f; /* Left border for accent */
+}
+
+/* Success message styling */
+.unique-success-message {
+    color: green;
+    border-left: 5px solid #388e3c; /* Left border for accent */
+}
+
+/* Styling for icons */
+.unique-notification-icon {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .unique-login-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+    .unique-form-title {
+        font-size: 28px; /* Slightly smaller font size */
+    }
+    .unique-form-input, .unique-submit-button {
+        padding: 10px; /* Adjust padding for input and button */
+    }
+}
+
+/* Unique styles for the register page */
+/*.unique-form-wrapper {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    max-width: 800px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.unique-form-container {*/
+/*    width: 100%;*/
+/*    max-width: 500px;*/
+/*    padding: 40px;*/
+/*    background-color: #333;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center*/
+/*}*/
+.unique-form-container {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    width: 100%;
+    max-width: 400px; /* Compact form width */
+    background-color: #333;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    align-content: center/* Include padding and border in element's total width and height */
+}
+
+
+.unique-form-title {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.unique-form-label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.unique-error-message {
+    color: #ea4335;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.unique-form-input {
+    width: calc(100% - 30px);
+    padding: 15px;
     border: none;
-    color: white;
-    padding: 15px 32px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center; /* Center-align text for a consistent look */
+}
+
+.unique-form-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.unique-submit-btn {
+    width:80%;
+    padding: 15px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.unique-submit-btn:hover {
+    background-color: #666;
+}
+
+/* Container Styles */
+.container, .container-post, .container1, .container-log, .container2 {
+    width: 90%;
+    margin: auto;
+    background-color: #ffffff; /* Pale white for containers */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.container-post {
+    min-height: 450px;
+    margin-bottom: 100px;
+}
+
+.container1, .container-log {
+    width: 30%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 30px;
+}
+
+.container2 {
+    width: 50%;
+}
+
+/*!* Post Styles *!*/
+/*.posts_wrapper {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.post {*/
+/*    background-color: #fdfdfd; !* Slightly darker white for posts *!*/
+/*    padding: 20px;*/
+/*    margin-top: 20px;*/
+/*    text-align: left;*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    gap: 20px;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.post .post-content {*/
+/*    flex: 1;*/
+/*}*/
+
+/*.post h2 {*/
+/*    text-align: left;*/
+/*    margin-top: 10px;*/
+/*    text-transform: capitalize;*/
+/*    color: #b5651d; !* Light brown for post titles *!*/
+/*    font-weight: normal;*/
+/*}*/
+
+/*.post img {*/
+/*    width: 130px;*/
+/*    height: 150px;*/
+/*    margin-right: 20px;*/
+/*    display: block;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.edit-button {*/
+/*    text-align: right;*/
+/*    margin-top: 20px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.post p {*/
+/*    text-align: justify;*/
+/*    color: #555; !* Slightly darker grey for post text *!*/
+/*}*/
+
+/*.comment {*/
+/*    position: relative;*/
+/*    background-color: #f8f8f8; !* Light grey for comment backgrounds *!*/
+/*    padding: 15px;*/
+/*    text-align: justify;*/
+/*    width: 80%;*/
+/*    margin: 10px auto;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/* Form Styles */
+form, .form-log {
+    margin: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fdfdfd; /* Slightly off-white for inputs */
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button Styles */
+.green-btn, .red-btn, .blue-btn {
+    padding: 12px 28px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.green-btn {
+    background-color: #b5651d; /* Light brown */
 }
 
 .green-btn:hover {
-    background-color: #555555;
+    background-color: #8b4513; /* Darker shade on hover */
 }
 
 .red-btn {
-    background-color: #f44336;
+    background-color: #c0392b; /* Soft red */
+}
+
+.red-btn:hover {
+    background-color: #a93226;
 }
 
 .blue-btn {
-    background-color: #c55d18;
+    background-color: #5dade2; /* Soft blue */
 }
 
-input, select {
+.blue-btn:hover {
+    background-color: #3498db;
+}
+.footer {
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center align text */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Box shadow on top border */
+    position: fixed; /* Fix to bottom */
+    bottom: 0;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+}
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark grey text color */
+    font-size: 18px; /* Adjust font size */
+    font-weight: 600;
 }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
+
+/* Alert Styles */
+.alert-success, .alert-red, .alert-green {
+    padding: 20px;
+    color: white;
+    margin: 15px auto;
+    width: 80%;
     border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.alert-success {
+    background-color: #27ae60; /* Success green */
+}
+
+.alert-red {
+    background-color: #e74c3c; /* Red for errors */
+}
+
+.alert-green {
+    background-color: #b5651d; /* Light brown for other notifications */
+}
+
+/* Link Styles */
+a {
+    color: #b5651d; /* Light brown for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8b4513; /* Darker brown on hover */
+}
+
+/* Utility Classes */
 .float-right {
     float: right;
 }
@@ -301,4 +651,404 @@ textarea {
 
 .align-center {
     text-align: center;
+}
+
+/* Post page design with shades of grey */
+/*working posts*/
+/*!* Post page design with shades of grey *!*/
+.content-wrapper {
+    background-color: #f2f2f2;
+    background-image : url("https://t3.ftcdn.net/jpg/03/54/43/80/240_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 100%;
+    max-width: 1600px;
+    padding: 50px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.alert-success {
+    background-color: rgb(65, 179, 162,0.3); /* Light grey */
+    color: #333; /* Darker grey */
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-card {
+    background-color: rgb(246, 245, 242,0.6); /* Light grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    min-width: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222; /* Dark grey */
+}
+
+.post-body {
+    font-size: 16px;
+    color: #222; /* Medium grey */
+    margin-bottom: 15px;
+}
+
+.edit-button .download-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.edit-btn .download-btn{
+    background-color: #222; /* Medium grey */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover .download-btn:hover{
+    background-color: #666; /* Darker grey */
+}
+
+.comments-section {
+    width: 100%;
+    background-color: rgb(246, 245, 242,0.7); /* Light grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.comment-header {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #222; /* Dark grey */
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-info {
+    font-size: 14px;
+    color: #222; /* Medium grey */
+    margin-bottom: 5px;
+}
+
+.comment-body {
+    font-size: 16px;
+    color: #555; /* Medium grey */
+}
+
+.comment-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.comment-btn {
+    background-color: #222; /* Darker grey */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-btn:hover {
+    background-color: #333; /* Even darker grey */
+}
+.content-wrapper {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/*Post form */
+
+/* Post Container Styling */
+.post-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: rgb(245, 247, 248 , 0.6) ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form h2 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Alert Message Styling */
+.alert-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+
+
+/*comment form*/
+
+
+/* Container for the form */
+.comment-container {
+    width: 50%;
+
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding:60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.comment-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.comment-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.button-container {
+    text-align: center;
+}
+
+.btn-submit {
+    background-color: #379777;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: green;
+}
+
+/* Error Message Styling */
+.alert-red {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/*posts page home*/
+/* Wrapper for Posts */
+.posts_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px; /* Spacing between cards */
+    background-color: transparent; /* Semi-transparent white */
+    /* Alternatively, you can use 'transparent' for full transparency */
+    /* background-color: rgba(255, 255, 255, 0.5) */
+}
+/* Individual Post Card Styling */
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for each post card */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.post img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Title and Body Text Styling */
+.post h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.post p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px; /* Fix the height to control text overflow */
 }

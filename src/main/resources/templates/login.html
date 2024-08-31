@@ -1,38 +1,185 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head th:replace="/fragments/head :: head"></head>-->
+
+<!--<body>-->
+
+<!--<div th:replace="/fragments/header :: header"></div>-->
+
+<!--<div class="container-log">-->
+
+<!--    <div th:if="${param.error}">-->
+<!--        <p class="alert-red">Invalid username and/or password</p>-->
+<!--    </div>-->
+<!--    <div th:if="${param.logout}">-->
+<!--        <p class="alert-green">You have been successfully logged out</p>-->
+<!--    </div>-->
+<!--    <div th:if="${param.signupSuccess}">-->
+<!--        <p class="alert-green">Sign up successful, please login</p>-->
+<!--    </div>-->
+
+<!--    <form th:action="@{/login}" method="post">-->
+<!--        <h1 style="margin-left: 140px;"><b>Log In</b></h1>-->
+<!--        <div>-->
+<!--            <input type="text" name="username" id="username" placeholder="UserName" required="true" autofocus="true"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input type="password" name="password" id="password" placeholder="Password" required="true"/>-->
+<!--        </div>-->
+<!--        <div class="align-center"></div>-->
+<!--        <div>-->
+<!--            <input type="submit" class="green-btn blue-btn" value="Login"/>-->
+<!--        </div>-->
+<!--    </form>-->
+
+<!--</div>-->
+
+<!--<footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="/fragments/head :: head"></head>-->
+<!--<body>-->
+
+<!--<div th:replace="/fragments/header :: header"></div>-->
+
+<!--<div class="login-container">-->
+<!--    <div th:if="${param.error}">-->
+<!--        <p class="notification error-message">Invalid username and/or password</p>-->
+<!--    </div>-->
+<!--    <div th:if="${param.logout}">-->
+<!--        <p class="notification success-message">You have been successfully logged out</p>-->
+<!--    </div>-->
+<!--    <div th:if="${param.signupSuccess}">-->
+<!--        <p class="notification success-message">Sign up successful, please login</p>-->
+<!--    </div>-->
+
+<!--    <form th:action="@{/login}" method="post" class="login-form">-->
+<!--        <h1 class="form-title">Log In</h1>-->
+<!--        <div class="input-group">-->
+<!--            <input type="text" name="username" id="username" placeholder="Username" required="true" autofocus="true" class="form-input"/>-->
+<!--        </div>-->
+<!--        <div class="input-group">-->
+<!--            <input type="password" name="password" id="password" placeholder="Password" required="true" class="form-input"/>-->
+<!--        </div>-->
+<!--        <div class="input-group">-->
+<!--            <label class="checkbox-label">-->
+<!--                <input type="checkbox" name="rememberMe" id="rememberMe" class="checkbox-input"> Remember Me </input>-->
+<!--            </label>-->
+<!--        </div>-->
+<!--        <div class="input-group">-->
+<!--            <input type="submit" class="submit-button" value="Login"/>-->
+<!--        </div>-->
+<!--        <div class="form-footer">-->
+<!--            <a href="/forgot-password" class="forgot-password-link">Forgot Password?</a>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+<!--<footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--    <!DOCTYPE html>-->
+<!--    <html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--    <head th:replace="/fragments/head :: head">-->
+
+
+<!--    </head>-->
+<!--    <body>-->
+
+<!--    <div th:replace="/fragments/header :: header"></div>-->
+<!--    <div class="login-container-out">-->
+<!--    <div class="login-container">-->
+<!--        <div th:if="${param.error}">-->
+<!--            <p class="notification error-message">Invalid username and/or password</p>-->
+<!--        </div>-->
+<!--        <div th:if="${param.logout}">-->
+<!--            <p class="notification success-message">You have been successfully logged out</p>-->
+<!--        </div>-->
+<!--        <div th:if="${param.signupSuccess}">-->
+<!--            <p class="notification success-message">Sign up successful, please login</p>-->
+<!--        </div>-->
+
+<!--        <form th:action="@{/login}" method="post" class="login-form">-->
+<!--            <h1 class="form-title">Log In</h1>-->
+<!--            <div class="input-group">-->
+<!--                <input type="text" name="username" id="username" placeholder="Username" required="true" autofocus="true" class="form-input"/>-->
+<!--            </div>-->
+<!--            <div class="input-group">-->
+<!--                <input type="password" name="password" id="password" placeholder="Password" required="true" class="form-input"/>-->
+<!--            </div>-->
+
+<!--            <div class="input-group">-->
+<!--                <input type="submit" class="submit-button" value="Login"/>-->
+<!--            </div>-->
+<!--            <div class="form-footer">-->
+<!--                <a href="/forgot-password" class="forgot-password-link">Forgot Password?</a>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--    </div>-->
+
+<!--    <footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--    </body>-->
+<!--    </html>-->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head th:replace="/fragments/head :: head"></head>
-
+<head th:replace="/fragments/head :: head">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 <body>
 
 <div th:replace="/fragments/header :: header"></div>
+<div class="content-wrapper">
+    <div class="unique-login-container-out">
+        <div class="unique-login-container">
+            <div th:if="${param.error}">
+                <p class="unique-notification unique-error-message">
+                    <span class="unique-notification-icon">❗</span> <!-- Error emoji -->
+                    Invalid username or password
+                </p>
+            </div>
+            <div th:if="${param.logout}">
+                <p class="unique-notification unique-success-message">
+                    <span class="unique-notification-icon">👋</span> <!-- Logout emoji -->
+                    You have been successfully logged out
+                </p>
+            </div>
+            <div th:if="${param.signupSuccess}">
+                <p class="unique-notification unique-success-message">
+                    <span class="unique-notification-icon">✅</span> <!-- Success emoji -->
+                    Sign up successful, please login
+                </p>
+            </div>
 
-<div class="container-log">
+            <form th:action="@{/login}" method="post" class="unique-login-form">
+                <h1 class="unique-form-title">Log In 🔐</h1> <!-- Lock emoji -->
+                <div class="unique-input-group">
+                    <input type="text" name="username" id="username" placeholder="👤 Username" required="true" autofocus="true" class="unique-form-input"/> <!-- User emoji -->
+                </div>
+                <div class="unique-input-group">
+                    <input type="password" name="password" id="password" placeholder="🔒 Password" required="true" class="unique-form-input"/> <!-- Key emoji -->
+                </div>
 
-    <div th:if="${param.error}">
-        <p class="alert-red">Invalid username and/or password</p>
-    </div>
-    <div th:if="${param.logout}">
-        <p class="alert-green">You have been successfully logged out</p>
-    </div>
-    <div th:if="${param.signupSuccess}">
-        <p class="alert-green">Sign up successful, please login</p>
-    </div>
-
-    <form th:action="@{/login}" method="post">
-        <h1 style="margin-left: 140px;"><b>Log In</b></h1>
-        <div>
-            <input type="text" name="username" id="username" placeholder="UserName" required="true" autofocus="true"/>
+                <div class="unique-input-group">
+                    <input type="submit" class="unique-submit-button" value="Login ➡️"/> <!-- Arrow emoji -->
+                </div>
+                <!-- Optional: Uncomment for Forgot Password link -->
+                <!-- <div class="unique-form-footer">
+                    <a href="/forgot-password" class="unique-forgot-password-link">Forgot Password? 🔑</a> <!-- Key emoji -->
         </div>
-        <div>
-            <input type="password" name="password" id="password" placeholder="Password" required="true"/>
-        </div>
-        <div class="align-center"></div>
-        <div>
-            <input type="submit" class="green-btn blue-btn" value="Login"/>
-        </div>
-    </form>
-
+        </form>
+    </div>
+</div>
 </div>
 
 <footer th:replace="/fragments/footer :: footer"></footer>

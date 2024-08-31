@@ -1,8 +1,44 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div th:fragment="posts(posts)">-->
+
+<!--    <div class="posts_wrapper">-->
+<!--        <div class="post" th:each="post : ${posts}">-->
+<!--            &lt;!&ndash; <h2><a th:href="@{'/post/' + ${post.id}}" th:text="${post.title}">Title</a></h2>-->
+<!--            <p th:text="${post.body}">body text</p>-->
+<!--            <br> &ndash;&gt;-->
+<!--            <img th:src="${post.imageUrl}" alt="Post Image" style="width: 130px; height: 150px; margin-right: 15px;"/>-->
+<!--            <div>-->
+<!--                <h2><a th:href="@{'/post/' + ${post.id}}" th:text="${post.title}">Title</a></h2>-->
+<!--                <p th:text="${post.body}">body text</p>-->
+<!--                <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">-->
+<!--                    <a th:href="@{'/editPost/{id}'(id=${post.id})}">-->
+<!--                        <button class="green-btn blue-btn" type="button">Edit</button>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--        -->
+<!--            </div>-->
+<!--    -->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="path/to/your/css"> <!-- Link to the updated CSS -->
 </head>
 <body>
 
@@ -10,21 +46,11 @@
 
     <div class="posts_wrapper">
         <div class="post" th:each="post : ${posts}">
-            <!-- <h2><a th:href="@{'/post/' + ${post.id}}" th:text="${post.title}">Title</a></h2>
-            <p th:text="${post.body}">body text</p>
-            <br> -->
-            <img th:src="${post.imageUrl}" alt="Post Image" style="width: 130px; height: 150px; margin-right: 15px;"/>
-            <div>
+            <img th:src="${post.imageUrl}" alt="Post Image" class="post-image"/>
+            <div class="post-content">
                 <h2><a th:href="@{'/post/' + ${post.id}}" th:text="${post.title}">Title</a></h2>
                 <p th:text="${post.body}">body text</p>
-                <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">
-                    <a th:href="@{'/editPost/{id}'(id=${post.id})}">
-                        <button class="green-btn blue-btn" type="button">Edit</button>
-                    </a>
-                </div>
-        
             </div>
-    
         </div>
     </div>
 
